@@ -9,8 +9,8 @@ module Piet
       true
     end
 
-    def pngquant(path)
-      PngQuantizator::Image.new(path).quantize!
+    def pngquant(path, colors = 256)
+      PngQuantizator::Image.new(path).quantize!(colors)      
     end
 
     private
